@@ -28,7 +28,7 @@ module.exports = yeoman.generators.Base.extend({
       {
         type: 'list',
         name: 'project-style',
-        message: `Is this an application or element project?\n` +
+        message: `Is this an Polymer 2.0 application or element project?\n` +
           chalk.reset.green(
             `  Element projects place elements at the top level ` +
               `for easy import into other projects.\n` +

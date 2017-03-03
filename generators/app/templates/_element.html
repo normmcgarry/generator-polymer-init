@@ -11,17 +11,18 @@
   </template>
 
   <script>
-    Polymer({
-
-      is: '<%= name %>',
-
-      properties: {
-        prop1: {
-          type: String,
-          value: '<%= name %>',
-        },
-      },
-
+    customElements.define('<%= name %>', class extends Polymer.Element {
+      static get is() { return '<%= name %>'; }
+      static get config() {
+        return {
+          properties: {
+            prop1: {
+              type: String,
+              value: '<%= name %>'
+            }
+          }
+        };
+      }
     });
   </script>
 </dom-module>
